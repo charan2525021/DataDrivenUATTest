@@ -39,7 +39,7 @@ public class BaseUI {
 
 
         if (browserName.equalsIgnoreCase("Chrome") || browserName.equalsIgnoreCase("Chromebrowser")) {
-         WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
 
         } else if (browserName.equalsIgnoreCase("mozilla") || browserName.equalsIgnoreCase("mozillabrowser")) {
@@ -55,13 +55,13 @@ public class BaseUI {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
-       try {
+        try {
 
             prop = Filereader.getFilereader().getConfigFile().getWebloctorFromPropertyFile();
-       }catch (Exception e){
+        }catch (Exception e){
 
-           ReportFail(e.getMessage());
-       }
+            ReportFail(e.getMessage());
+        }
 
 //        if (prop == null) {
 //
@@ -91,6 +91,11 @@ public class BaseUI {
         }
 
 
+    }
+
+    public void openWebSite(){
+
+        driver.get(Filereader.getFilereader().getConfigFile().getwebsite());
     }
 
 
