@@ -8,24 +8,27 @@ public class ConfigFile {
     Properties prop;
 
 
-    public Properties getWebloctorFromPropertyFile(){
+    public Properties getWebloctorFromPropertyFile() {
 
         try {
-            if (prop==null){
-                FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "//src//test//resources//ObjectRepository//webelement.properties");
+            if (prop == null) {
+                prop = new Properties();
+                FileInputStream file = new FileInputStream(System.getProperty("user.dir")
+                        + "//src//test//resources//ObjectRepository//webelement.properties");
                 prop.load(file);
 
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return prop;
     }
 
-    public String getwebsite(){
+    public String getwebsite() {
 
+        prop = this.getWebloctorFromPropertyFile();
         String url = prop.getProperty("url");
-        if (url!=null) return url;
+        if (url != null) return url;
         else throw new RuntimeException("Url is empty");
     }
 
