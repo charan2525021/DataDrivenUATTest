@@ -32,7 +32,7 @@ public class BaseUI {
     public static WebDriver driver;
     private Properties prop;
     public static ExtentReports extentreport = ExtentReportManger.getReportInstance();
-    public static ExtentTest logger = null;
+    public static ExtentTest logger ;
 
     /*****************Invoke Browser****************************/
     public void invokeBrowser(String browserName) {
@@ -58,7 +58,7 @@ public class BaseUI {
         try {
 
             prop = Filereader.getFilereader().getConfigFile().getWebloctorFromPropertyFile();
-        }catch (Exception e){
+        } catch (Exception e) {
 
             ReportFail(e.getMessage());
         }
@@ -93,9 +93,11 @@ public class BaseUI {
 
     }
 
-    public void openWebSite(){
+    public void openWebSite() {
 
         driver.get(Filereader.getFilereader().getConfigFile().getwebsite());
+        logger.log(Status.INFO,"Open Website");
+//        ReportPass(Filereader.getFilereader().getConfigFile().getwebsite()+" Opened");
     }
 
 
@@ -394,7 +396,7 @@ public class BaseUI {
         logger.log(Status.PASS, reportMessage);
     }
 
-    public static  void takeScreenshotsonFail() {
+    public static void takeScreenshotsonFail() {
 
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File sourcefile = takesScreenshot.getScreenshotAs(OutputType.FILE);

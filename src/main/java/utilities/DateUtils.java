@@ -7,7 +7,7 @@ public class DateUtils {
 
     public static String getTimeStamp(){
         Date date = new Date();
-        String timeStamp=date.toString().replaceAll(":","_").replaceAll(" ","_");
+        final String timeStamp=date.toString().replaceAll(":","_").replaceAll(" ","_");
         return timeStamp;
     }
 }
