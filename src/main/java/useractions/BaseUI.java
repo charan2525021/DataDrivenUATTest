@@ -19,7 +19,6 @@ import utilities.DateUtils;
 import utilities.ExtentReportManger;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -411,11 +410,12 @@ public class BaseUI {
 //            e.printStackTrace();
 //        }
 
-        File destinationFile = new File(System.getProperty("user.dir") + "\\Screenshots\\" + DateUtils.getTimeStamp() + ".png");
+        final  String screenshotPath = System.getProperty("user.dir") + "\\Screenshots\\" + DateUtils.getTimeStamp() + ".png";
+        File destinationFile = new File(screenshotPath);
         try {
             FileUtils.copyFile(sourcefile, destinationFile);
             logger.addScreenCaptureFromPath
-                    (System.getProperty("user.dir") + "//Screenshots//" + DateUtils.getTimeStamp() + ".png");
+                    (screenshotPath);
         } catch (IOException e) {
             e.printStackTrace();
         }

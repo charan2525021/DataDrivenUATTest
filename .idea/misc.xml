@@ -4,7 +4,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.pom" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.pom" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">

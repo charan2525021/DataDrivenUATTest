@@ -3,20 +3,17 @@ package utilities;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
-import org.testng.annotations.Test;
 
 public class ExtentReportManger {
 
     public static ExtentHtmlReporter htmlReporter;
     public static ExtentReports report ;
 
-    @Test
     public static ExtentReports getReportInstance() {
 
         if (report == null) {
             final String reportName = DateUtils.getTimeStamp() + ".html";
              htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "\\test-output\\" + reportName);
-            System.out.println(System.getProperty("user.dir") + "\\test-output\\" + reportName);
             report = new ExtentReports();
             report.attachReporter(htmlReporter);
 
