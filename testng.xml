@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="E:/UserTesting"><classes><class name="TestCases.TestCases.CIM80482"><methods><include name="CIM80482"/></methods></class><class name="useractions.msn"><methods><include name="invoke"/></methods></class></classes></test></suite>

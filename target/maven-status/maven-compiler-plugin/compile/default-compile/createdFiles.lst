@@ -1,0 +1,10 @@
+managers\filereader\Filereader.class
+utilities\ReadTestData.class
+managers\configfile\ConfigFile.class
+utilities\readExcelFile.class
+TestCases\TestCases\CIM80482.class
+useractions\BaseUI.class
+utilities\ExtentReportManger.class
+utilities\DateUtils.class
+useractions\msn.class
+utilities\readDataFromExcel.class
