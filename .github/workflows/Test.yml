@@ -1,8 +1,8 @@
-Build scripit:
-  image: node:lts
-  script:
-   - npm install
-   - npm install -g gatsby-cli
-   - Gatsby build
+Buildscripit:
+    image: node:lts
+    script:
+        - npm install
+        - npm install -g gatsby-cli
+        - Gatsby build
  
   
