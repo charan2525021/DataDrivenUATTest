@@ -8,6 +8,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
+      - run: apt-get install sudo
+      - run: sudo install nodejs npm
       - run: npm install -g gatsby-cli
       - run: gatsby new static-website
       - run: gatsby build
